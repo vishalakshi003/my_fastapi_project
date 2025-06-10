@@ -20,7 +20,7 @@ async def create_db_tables():
 
 
 """used to create session in async"""
-async def get_session():
+async def get_session():#database setup
     async_session= sessionmaker(bind=engine,class_=AsyncSession,expire_on_commit=False)
     
     async with async_session() as session:

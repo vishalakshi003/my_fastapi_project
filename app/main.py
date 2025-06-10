@@ -8,7 +8,7 @@ from app.api.route import master_router
 
 #lifespan of server
 """it provides a clean and async-safe way to manage startup and shutdown logic in one place."""
-@asynccontextmanager
+@asynccontextmanager#it will handle start and stop of conn
 async def lifesapan_handler(app:FastAPI):
     await create_db_tables()
     print(panel.Panel("server start........",border_style="green"))
